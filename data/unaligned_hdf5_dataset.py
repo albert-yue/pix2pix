@@ -56,7 +56,7 @@ class UnalignedHDF5Dataset(BaseDataset):
             index_B = random.randint(0, self.B_size - 1)
         B_path = self.B_paths[index_B]
         A_img = default_loader(A_path)
-        B_img = default_loader(B_path)[:3] # gets only the image
+        B_img = default_loader(B_path)
 
         A = torch.from_numpy(A_img).float()
         B = torch.from_numpy(B_img).float()
