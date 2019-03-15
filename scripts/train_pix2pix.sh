@@ -1,2 +1,2 @@
 set -ex
-python train.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --netG unet_256 --direction BtoA --lambda_L1 100 --dataset_mode aligned --norm batch --pool_size 0
+python train.py --dataroot ./datasets/flags --name flags_pix2pix --model pix2pix --netG unet_128 --input_nc 5 --direction AtoB --lambda_L1 100 --dataset_mode unaligned_hdf5 --norm batch --pool_size 0 --gpu_ids -1
